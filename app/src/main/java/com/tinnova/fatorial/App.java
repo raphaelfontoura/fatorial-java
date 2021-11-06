@@ -3,9 +3,20 @@
  */
 package com.tinnova.fatorial;
 
+import com.tinnova.fatorial.core.Fatorial;
+
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("=== Calcule o fatorial ===");
+        System.out.print("Informe um número para calcular o fatorial: ");
+        int value = input.nextInt();
+        int fatorial = Fatorial.getFatorial(value);
+        System.out.printf("\nO fatorial de %d --> %d", value, fatorial);
 
+        input.close();
     }
 }
